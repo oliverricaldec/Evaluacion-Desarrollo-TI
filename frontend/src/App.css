@@ -1,0 +1,380 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+button,
+select,
+input {
+    font-family: inherit;
+}
+
+.app {
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 30px;
+    color: #0f172a;
+}
+
+.header p {
+    margin: 8px 0 0;
+    color: #64748b;
+}
+
+/* =========================
+   CARDS
+   ========================= */
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.card h2 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    color: #0f172a;
+}
+
+.card h3 {
+    margin: 0 0 15px;
+    font-size: 16px;
+}
+
+/* =========================
+   FORMULARIO
+   ========================= */
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #334155;
+}
+
+.campo select,
+.campo input {
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.campo select:focus,
+.campo input:focus {
+    border-color: #2563eb;
+}
+
+.campo input:disabled {
+    background: #f8fafc;
+    color: #475569;
+}
+
+/* =========================
+   HORARIOS
+   ========================= */
+
+.horarios {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.horarios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.horario {
+    padding: 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: 0.15s;
+}
+
+.horario:hover {
+    border-color: #94a3b8;
+    background: #f8fafc;
+}
+
+.horario.seleccionado {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.horario strong {
+    font-size: 15px;
+    color: #0f172a;
+}
+
+.horario span {
+    color: #475569;
+    font-size: 14px;
+}
+
+/* =========================
+   HORARIO SELECCIONADO
+   ========================= */
+
+.horario-seleccionado {
+    margin-top: 20px;
+    padding: 15px 18px;
+    border-radius: 8px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    display: flex;
+    gap: 60px;
+}
+
+.horario-seleccionado div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.horario-seleccionado span {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.horario-seleccionado strong {
+    font-size: 16px;
+    color: #1d4ed8;
+}
+
+/* =========================
+   BOTONES
+   ========================= */
+
+button {
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.15s;
+}
+
+.btn-primary {
+    margin-top: 20px;
+    padding: 11px 20px;
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* =========================
+   CARRITO
+   ========================= */
+
+.titulo-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo-carrito h2 {
+    margin-bottom: 5px;
+}
+
+.titulo-carrito p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.contador {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* =========================
+   TABLA
+   ========================= */
+
+.tabla-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: #f8fafc;
+    color: #475569;
+    font-size: 13px;
+    text-align: left;
+    padding: 13px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+td {
+    padding: 14px 13px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 5px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btn-delete {
+    padding: 7px 12px;
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.btn-delete:hover {
+    background: #fecaca;
+}
+
+/* =========================
+   CARRITO VACÍO
+   ========================= */
+
+.carrito-vacio {
+    margin-top: 15px;
+    padding: 25px;
+    text-align: center;
+    border: 1px dashed #cbd5e1;
+    border-radius: 7px;
+    color: #64748b;
+}
+
+/* =========================
+   MENSAJES
+   ========================= */
+
+.mensaje {
+    margin-top: 20px;
+    padding: 13px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.mensaje.success {
+    background: #dcfce7;
+    border: 1px solid #86efac;
+    color: #166534;
+}
+
+.mensaje.error {
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #991b1b;
+}
+
+
+   GUARDAR
+
+
+.btn-guardar {
+    margin-top: 20px;
+    width: 100%;
+    padding: 13px;
+    background: #16a34a;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn-guardar:hover {
+    background: #15803d;
+}
+
+
+
+@media (max-width: 700px) {
+
+    .app {
+        padding: 20px 10px;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .horarios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .horario-seleccionado {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+}
